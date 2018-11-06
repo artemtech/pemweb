@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="assets/css/lightbox.css">
     <style type="text/css">
 	body{
-		background-color: #e7edee !important;
+		background-color: #e7edee !important;.
 	}
 </style>
 </head>
@@ -52,14 +52,13 @@
                                                             </div>
                         <div class="image-profile">
                 <div class="img-profile-content">
-                    <img src="https://www.gravatar.com/avatar/7f1faf39a24fa6a1bd053b454fd97f11?d=monsterid" alt="">
-                    <p>junior</p>
+                    <img src=" http://127.0.0.1:8000/image/avatartahilalats.jpg " alt="">
+                    <p>reno</p>
                 </div>
                 <ul>
-                    <li><a href="#!">Setting</a></li>
-                    <li><a href="http://127.0.0.1:8000/logout" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                        <li><a href="http://127.0.0.1:8000/logout" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                     Logout</a>
-                    <form id="logout-form" action="http://127.0.0.1:8000/logout" method="POST" style="display: none;"> <input type="hidden" name="_token" value="xx3ASsiclcfYmVf7ZgpL7VwmfjFjuTRQPLu0R8ES"> </form></li>
+                    <form id="logout-form" action="http://127.0.0.1:8000/logout" method="POST" style="display: none;"> <input type="hidden" name="_token" value="SIbSdr6DhSqDCrrPmgs0vFFdApiYvPrI5Pv92OJb"> </form></li>
                 </ul>
             </div>
                         <div class="sign-login-side-right">
@@ -67,14 +66,14 @@
                                                                             </div>
                                 <div class="image-profile-mobile">
                     <div class="img-profile-content-mobile">
-                        <img src="https://www.gravatar.com/avatar/7f1faf39a24fa6a1bd053b454fd97f11?d=monsterid" alt="">
+                        <img src=" https://www.gravatar.com/avatar/ " alt="">
                     </div>
-                    <div class="name-profile"><p>junior</p></div>
+                    <div class="name-profile"><p>reno</p></div>
                     <ul>
                         <li><a href="#!">Setting</a></li>
                         <li><a href="http://127.0.0.1:8000/logout" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                         Logout</a>
-                        <form id="logout-form" action="http://127.0.0.1:8000/logout" method="POST" style="display: none;"> <input type="hidden" name="_token" value="xx3ASsiclcfYmVf7ZgpL7VwmfjFjuTRQPLu0R8ES"> </form></li>
+                        <form id="logout-form" action="http://127.0.0.1:8000/logout" method="POST" style="display: none;"> <input type="hidden" name="_token" value="SIbSdr6DhSqDCrrPmgs0vFFdApiYvPrI5Pv92OJb"> </form></li>
                     </ul>
                 </div>
                                             </div>
@@ -145,7 +144,7 @@
 					<i class="fa fa-product-hunt" aria-hidden="true"></i>
 				</div>
 				<div class="col-xs-8 detail-style" style="text-align: right;">
-					<p>0</p>
+					<p>1</p>
 					<h3>Produk</h3>
 				</div>
 			</div>
@@ -179,6 +178,18 @@
 					</tr>
 				</thead>
 				<tbody>
+										<tr>
+						<th>1</th>
+						<td>ikan</td>
+						<td>4302</td>
+						<td>Kg</td>
+						<td>443000</td>
+						<td class="button-aksi-table">
+							<a href="#!" data-toggle="modal" data-target="#editikan1">Edit</a>
+							<a href="/produk/1/destroy">Delete</a>
+							<a href="#!">Detail</a>
+						</td>
+					</tr>
 									</tbody>
 			</table>
 		</div>
@@ -196,7 +207,7 @@
 				<h4 class="modal-title" id="title-moda-new">Tambah Produk Ikan</h4>
 			</div>
 			<div class="modal-body">
-				<form action="/produk" method="POST">
+				<form action="/produk" method="POST" enctype="multipart/form-data">
 					<div class="form-group">
 						<div class="col-xs-12 col-sm-5" id="solve-grid">
 							<label class="lable-mod" for="exampleInputEmail1">Nama Ikan</label>
@@ -216,6 +227,7 @@
 								<option>Kg</option>
 								<option>Ekor</option>
 								<option>Ons</option>
+								<option>Satuan</option>
 								<option>Cm</option>
 								<option>inchi</option>
 								<option>liter</option>
@@ -225,7 +237,7 @@
 					<div class="moda-padding">
 						<div class="form-group">
 							<label class="lable-mod" for="exampleInputEmail1">Foto Ikan</label>
-							<input type="judul" name="image" class="form-control" value="" id="mod-inputan" placeholder="Foto">
+							<input type="file" name="image" class="form-control" value="" id="mod-inputan" placeholder="Foto">
 						</div>
 						<div class="form-group">
 							<label class="lable-mod" for="textarea-tinymce">Deskripsi</label> 
@@ -233,7 +245,7 @@
 						</div>
 						<button type="submit" class="btn btn-block btn-default">Submit</button>
 					</div>
-					<input type="hidden" name="_token" value="xx3ASsiclcfYmVf7ZgpL7VwmfjFjuTRQPLu0R8ES">
+					<input type="hidden" name="_token" value="SIbSdr6DhSqDCrrPmgs0vFFdApiYvPrI5Pv92OJb">
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 					</div>
@@ -245,6 +257,65 @@
 </div>
 
 <!-- edit ikan -->
+<div class="modal fade" id="editikan1" role="dialog">
+	<div class="modal-dialog modal-lg">
+
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header" id="new-modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title" id="title-moda-new">Edit Produk Ikan</h4>
+			</div>
+			<div class="modal-body">
+				<form action="/produk/1" method="POST"  enctype="multipart/form-data">
+					<div class="form-group">
+						<div class="col-xs-12 col-sm-5" id="solve-grid">
+							<label class="lable-mod" for="exampleInputEmail1">Nama Ikan</label>
+							<input type="judul" name="name" class="form-control" value="ikan" id="mod-inputan" placeholder="Nama">
+						</div>
+						<div class="col-xs-12 col-sm-2" id="solve-grid">
+							<label class="lable-mod" for="exampleInputEmail1">Stok</label>
+							<input type="judul" name="stok" class="form-control" value="4302" id="mod-inputan" placeholder="Stok">
+						</div>
+						<div class="col-xs-12 col-sm-3" id="solve-grid">
+							<label class="lable-mod" for="exampleInputEmail1">Harga</label>
+							<input type="judul" name="harga" class="form-control" value="443000" id="mod-inputan" placeholder="Harga">
+						</div>
+						<div class="col-xs-12 col-sm-2" id="solve-grid">
+							<label class="lable-mod" for="exampleInputEmail1">Satuan</label>
+							<select id="select-satuan" name="satuan">
+								<option selected>Kg</option>
+								<option >Ekor</option>
+								<option >Ons</option>
+								<option >Satuan</option>
+								<option >Cm</option>
+								<option >inchi</option>
+								<option >liter</option>
+							</select>
+						</div>
+					</div>
+					<div class="moda-padding">
+						<div class="form-group">
+							<label class="lable-mod" for="exampleInputEmail1">Foto Ikan</label>
+							<input type="file" name="image" class="form-control" value="1541430559-bg 1.jpg" id="mod-inputan" placeholder="Foto">
+						</div>
+						<div class="form-group">
+							<label class="lable-mod" for="textarea-tinymce">Deskripsi</label> 
+							<textarea name="deskripsi" rows="8" id="editcomment-tinymce1" placeholder="Deskripsi Ikan...">&lt;p&gt;345345 34534td rdgert ertert drtyhhhhhhhhhhhhhh dfhdddddddddddd hddddddddddddddddd dyjjjjjjjjjj fdddddddddd&lt;/p&gt;</textarea>
+						</div>
+						<button type="submit" class="btn btn-block btn-default">Submit</button>
+					</div>
+					<input type="hidden" name="_token" value="SIbSdr6DhSqDCrrPmgs0vFFdApiYvPrI5Pv92OJb">
+					<input type="hidden" name="_method"  value="PUT">
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</form>
+			</div>
+		</div>
+
+	</div>
+</div>
 
 
 <footer>
@@ -257,6 +328,14 @@
 <script src="http://127.0.0.1:8000/js/tinymce/tinymce.min.js" type="text/javascript"></script>
 <script src="http://127.0.0.1:8000/js/tinymcescript.js" type="text/javascript"></script>
 <script src="http://127.0.0.1:8000/js/lightbox.js" type="text/javascript"></script>
+<script type="text/javascript">
+	tinymce.init({
+		selector: '#editcomment-tinymce1',
+		menubar: false,
+		plugins: 'image, link, emoticons',
+		branding: false,
+	});
+</script>
 <script type="text/javascript" src="http://127.0.0.1:8000/js/javascript.js"></script>
 </body>
 </html>
